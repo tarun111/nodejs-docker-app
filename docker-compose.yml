@@ -10,7 +10,7 @@ services:
             - redis
         ports:
             - "8080:8080"
-        entrypoint: /application/start.sh
+        command: sh -c "npm install && node app.js"
     redis:
         image: redis:latest
         container_name: redis
